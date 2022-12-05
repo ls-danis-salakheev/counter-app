@@ -20,11 +20,14 @@ repositories {
 }
 
 ext {
+    swaggerVersion = '3.0.0'
     set('snippetsDir', file("build/generated-snippets"))
 }
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation "io.springfox:springfox-swagger-ui:$swaggerVersion"
+    implementation "io.springfox:springfox-boot-starter:$swaggerVersion"
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
 
