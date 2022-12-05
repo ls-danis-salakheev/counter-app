@@ -46,3 +46,22 @@ tasks.named('asciidoctor') {
     inputs.dir snippetsDir
     dependsOn test
 }
+
+// test tasks
+task integration(type: Test) {
+    useJUnitPlatform {
+        includeTags 'integration'
+    }
+}
+
+task unit(type: Test) {
+    useJUnitPlatform {
+        includeTags 'unit'
+    }
+}
+
+task web(type: Test) {
+    useJUnitPlatform {
+        includeTags 'web'
+    }
+}
