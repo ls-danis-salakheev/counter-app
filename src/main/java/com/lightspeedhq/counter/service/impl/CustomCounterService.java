@@ -62,7 +62,7 @@ public class CustomCounterService implements CounterService {
      * @throws CounterProcessingException if the counter with {@code name} is not contained in the storage
      */
     @Override
-    public Long getValueByName(String name) {
+    public Long getByName(String name) {
         return storageMap.computeIfAbsent(name, count -> {
             throw new CounterProcessingException(NOT_FOUND_MESSAGE.formatted(name));
         });

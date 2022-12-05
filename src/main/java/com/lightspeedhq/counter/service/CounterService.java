@@ -8,7 +8,7 @@ public interface CounterService {
 
     Long incrementByName(String name);
 
-    Long getValueByName(String name);
+    Long getByName(String name);
 
     void removeByName(String name);
 
