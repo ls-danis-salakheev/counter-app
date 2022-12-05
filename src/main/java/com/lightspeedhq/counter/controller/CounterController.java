@@ -8,6 +8,9 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.Set;
 
+/**
+ * An interface for manipulation counter using REST
+ */
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/counter")
